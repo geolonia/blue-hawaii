@@ -1,0 +1,23 @@
+id: waterway-river
+type: line
+source: geolonia
+source-layer: waterway
+filter:
+  - all
+  - - '=='
+    - class
+    - river
+  - - '!='
+    - brunnel
+    - tunnel
+layout:
+  line-cap: round
+paint:
+  line-color: '#FFFFFF'
+  line-width:
+    base: 1.2
+    stops:
+      - - 10
+        - 5
+      - - 20
+        - 6

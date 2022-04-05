@@ -1,0 +1,23 @@
+id: landcover-grass
+type: fill
+source: geolonia
+source-layer: landcover
+filter:
+  - all
+  - - '=='
+    - $type
+    - Polygon
+  - - '=='
+    - class
+    - grass
+  - - '=='
+    - subclass
+    - park
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  visibility: visible
+paint:
+  fill-color: '#daeca9'
+  fill-opacity: 1

@@ -1,0 +1,12 @@
+id: building
+type: fill
+source: geolonia
+source-layer: building
+minzoom: 14
+filter:
+  - all
+  - - '>='
+    - ["get","building_area"]
+    - 2000
+paint:
+  fill-color: '#285783'
