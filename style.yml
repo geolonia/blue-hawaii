@@ -4,10 +4,10 @@ $name: Geolonia Basic
 
 version: 8
 name: $name
-zoom: 14
+zoom: 15
 center:
-  - 135.45381
-  - 34.68353
+  - 139.694671
+  - 35.694043
 sources:
   oceanus:
     type: vector
