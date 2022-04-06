@@ -1,0 +1,51 @@
+id: poi-convenience
+type: symbol
+source: geolonia
+source-layer: poi
+minzoom: 14
+filter:
+  - all
+  - - '=='
+    - $type
+    - Point
+  - - has
+    - name
+  - - '=='
+    - class
+    - convenience
+  - - '!='
+    - disputed
+    - japan_northern_territories
+layout:
+  text-padding: 2
+  text-font:
+    - Noto Sans Regular
+  text-anchor: top
+  icon-anchor: bottom
+  icon-image:
+    - image
+    - circle
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 50
+    - 17
+    - 30
+  icon-size: 0.6
+  text-field: '{name}'
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 8
+    - 17
+    - 11
+  text-max-width: 9
+  visibility: visible
+paint:
+  text-color: '#000'
+  text-halo-width: 1
+  text-halo-color: '#A9CEDE'
