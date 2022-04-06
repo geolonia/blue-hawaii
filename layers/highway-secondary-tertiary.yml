@@ -24,4 +24,14 @@ paint:
         - 0
       - - 13
         - 1
-  line-width: 13
+  line-width:
+    base: 3
+    stops:
+      - - 14
+        - 5
+      - - 15
+        - 11
+      - - 16
+        - 12
+      - - 17
+        - 14
