@@ -7,16 +7,22 @@ filter:
   - - '=='
     - class
     - rail
-  - - '!in'
-    - brunnel
-    - tunnel
 paint:
-  line-color: '#999999'
+  line-opacity: 0.7
+  line-color: '#285783'
+  line-offset:
+    stops:
+      - - 14
+        - 1
+      - - 17
+        - 6
+      - - 18
+        - 12
   line-width:
     stops:
-      - - 10
-        - 0.8
+      - - 14
+        - 0.5
+      - - 17
+        - 3
       - - 18
-        - 4
-      - - 22
-        - 20
+        - 5
