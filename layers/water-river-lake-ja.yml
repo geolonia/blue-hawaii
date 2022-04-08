@@ -11,4 +11,4 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#ffffff'
+  fill-color: '#E9E9E9'

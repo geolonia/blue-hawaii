@@ -5,4 +5,4 @@ source-layer: water
 layout:
   visibility: visible
 paint:
-  fill-color: '#FFFFFF'
+  fill-color: '#E9E9E9'
