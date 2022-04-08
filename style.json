@@ -37,78 +37,6 @@
       }
     },
     {
-      "id": "landcover-grass",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ],
-        [
-          "==",
-          "class",
-          "grass"
-        ],
-        [
-          "==",
-          "subclass",
-          "park"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#daeca9",
-        "fill-opacity": 1
-      }
-    },
-    {
-      "id": "landcover-grass-park-small",
-      "type": "fill",
-      "source": "geolonia",
-      "source-layer": "landcover",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "Polygon"
-        ],
-        [
-          "==",
-          "class",
-          "grass"
-        ],
-        [
-          "==",
-          "subclass",
-          "park"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": "#7694C1",
-        "fill-opacity": 1
-      }
-    },
-    {
       "id": "landcover-grass-park",
       "type": "fill",
       "source": "geolonia",
@@ -234,83 +162,6 @@
             ]
           ]
         }
-      }
-    },
-    {
-      "id": "waterway-name",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "waterway",
-      "minzoom": 13,
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "has",
-          "name"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "text-letter-spacing": 0.2,
-        "symbol-spacing": 350
-      },
-      "paint": {
-        "text-color": "#65cbf9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
-      }
-    },
-    {
-      "id": "water-name-lakeline",
-      "type": "symbol",
-      "source": "geolonia",
-      "source-layer": "water_name",
-      "filter": [
-        "all",
-        [
-          "==",
-          "$type",
-          "LineString"
-        ],
-        [
-          "!=",
-          "disputed",
-          "japan_northern_territories"
-        ]
-      ],
-      "layout": {
-        "text-font": [
-          "Noto Sans Regular"
-        ],
-        "text-size": 14,
-        "text-field": "{name}",
-        "text-max-width": 5,
-        "text-rotation-alignment": "map",
-        "symbol-placement": "line",
-        "symbol-spacing": 350,
-        "text-letter-spacing": 0.2
-      },
-      "paint": {
-        "text-color": "#74aee9",
-        "text-halo-width": 1.5,
-        "text-halo-color": "rgba(255,255,255,0.7)"
       }
     },
     {
@@ -869,6 +720,30 @@
       }
     },
     {
+      "id": "building-small",
+      "type": "fill",
+      "source": "geolonia",
+      "source-layer": "building",
+      "minzoom": 14,
+      "paint": {
+        "fill-color": "#285783",
+        "fill-opacity": [
+          "interpolate",
+          [
+            "exponential",
+            2
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          0,
+          17,
+          0.3
+        ]
+      }
+    },
+    {
       "id": "building",
       "type": "fill",
       "source": "geolonia",
@@ -976,10 +851,6 @@
         [
           "has",
           "wikidata"
-        ],
-        [
-          "!has",
-          "class"
         ],
         [
           "==",
