@@ -761,6 +761,114 @@
       }
     },
     {
+      "id": "railway",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ]
+      ],
+      "paint": {
+        "line-opacity": 0.7,
+        "line-color": "#285783",
+        "line-offset": {
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              18,
+              12
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              14,
+              0.5
+            ],
+            [
+              17,
+              3
+            ],
+            [
+              18,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "railway-hatching",
+      "type": "line",
+      "source": "geolonia",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "rail"
+        ],
+        [
+          "!in",
+          "brunnel",
+          "tunnel"
+        ]
+      ],
+      "paint": {
+        "line-color": "#ffffff",
+        "line-dasharray": [
+          15,
+          15
+        ],
+        "line-offset": {
+          "stops": [
+            [
+              14,
+              1
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              18,
+              12
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              14,
+              0.3
+            ],
+            [
+              17,
+              2
+            ],
+            [
+              18,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "building",
       "type": "fill",
       "source": "geolonia",
@@ -779,6 +887,82 @@
       ],
       "paint": {
         "fill-color": "#285783"
+      }
+    },
+    {
+      "id": "poi-convenience",
+      "type": "symbol",
+      "source": "geolonia",
+      "source-layer": "poi",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "Point"
+        ],
+        [
+          "has",
+          "name"
+        ],
+        [
+          "==",
+          "class",
+          "convenience"
+        ],
+        [
+          "!=",
+          "disputed",
+          "japan_northern_territories"
+        ]
+      ],
+      "layout": {
+        "text-padding": 2,
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-anchor": "top",
+        "icon-anchor": "bottom",
+        "icon-image": [
+          "image",
+          "circle"
+        ],
+        "icon-padding": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          50,
+          17,
+          30
+        ],
+        "icon-size": 0.6,
+        "text-field": "{name}",
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          14,
+          8,
+          17,
+          11
+        ],
+        "text-max-width": 9,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#000",
+        "text-halo-width": 1,
+        "text-halo-color": "#A9CEDE"
       }
     },
     {
