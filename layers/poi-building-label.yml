@@ -7,8 +7,8 @@ filter:
   - all
   - - 'has'
     - wikidata
-  - - '!has'
-    - class
+  # - - '!has'
+  #   - class
   - - '=='
     - rank
     - 25
