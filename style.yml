@@ -4,10 +4,10 @@ $name: Geolonia Basic
 
 version: 8
 name: $name
-zoom: 15
+zoom: 15.5
 center:
-  - 139.694671
-  - 35.694043
+  - 139.69567
+  - 35.69228
 sources:
   oceanus:
     type: vector
@@ -122,8 +122,8 @@ layers:
   # - !!inc/file layers/bridge-trunk-primary.yml
   # - !!inc/file layers/bridge-motorway-casing.yml
   # - !!inc/file layers/bridge-motorway.yml
-  # - !!inc/file layers/railway.yml
-  # - !!inc/file layers/railway-hatching.yml
+  - !!inc/file layers/railway.yml
+  - !!inc/file layers/railway-hatching.yml
   # - !!inc/file layers/cablecar.yml
   # - !!inc/file layers/cablecar-dash.yml
   # - !!inc/file layers/boundary-land-level-4.yml
@@ -138,6 +138,7 @@ layers:
   - !!inc/file layers/poi-convenience.yml
   # - !!inc/file layers/poi-r0-r9.yml
   # - !!inc/file layers/poi-entrance.yml
+  - !!inc/file layers/poi-building-label.yml
   - !!inc/file layers/poi-railway.yml
   # - !!inc/file layers/road_shield_prefectural.yml
   # - !!inc/file layers/road_shield_national.yml

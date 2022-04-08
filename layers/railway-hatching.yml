@@ -13,13 +13,21 @@ filter:
 paint:
   line-color: '#ffffff'
   line-dasharray:
-    - 6
-    - 4
+    - 15
+    - 15
+  line-offset:
+    stops:
+      - - 14
+        - 1
+      - - 17
+        - 6
+      - - 18
+        - 12
   line-width:
     stops:
-      - - 10
-        - 0.5
-      - - 18
+      - - 14
+        - 0.3
+      - - 17
         - 2
-      - - 22
-        - 18
+      - - 18
+        - 4
