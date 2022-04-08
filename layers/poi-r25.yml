@@ -2,7 +2,7 @@ id: poi-r25
 type: symbol
 source: geolonia
 source-layer: poi
-minzoom: 16
+minzoom: 14
 filter:
   - all
   - - '=='
@@ -26,27 +26,31 @@ layout:
   text-anchor: top
   icon-anchor: bottom
   icon-image:
-    - coalesce
-    - - image
-      - - concat
-        - - get
-          - class
-        - '-JP'
-    - - image
-      - - concat
-        - - get
-          - class
-        - ''
-    - - image
-      - circle
+    - image
+    - circle
+  icon-padding:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 10
+    - 17
+    - 50
+  icon-size: 0.6
   text-field: '{name}'
   text-offset:
     - 0
     - 0.3
-  text-size: 12
+  text-size:
+    - interpolate
+    - - linear
+    - - zoom
+    - 14
+    - 8
+    - 17
+    - 11
   text-max-width: 9
 paint:
-  text-halo-blur: 0.5
-  text-color: '#666'
+  text-color: '#000'
   text-halo-width: 1
-  text-halo-color: '#ffffff'
+  text-halo-color: '#A9CEDE'
