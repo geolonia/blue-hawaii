@@ -11,4 +11,4 @@ filter:
 layout:
   visibility: visible
 paint:
-  fill-color: '#E9E9E9'
+  fill-pattern: water-dot
