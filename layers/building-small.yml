@@ -1,0 +1,21 @@
+id: building-small
+type: fill
+source: geolonia
+source-layer: building
+minzoom: 14
+paint:
+  fill-color: '#285783'
+  fill-opacity:
+    # stops:
+    #   - - 14
+    #     - 0
+    #   - - 17
+    #     - 0.3
+    - interpolate
+    - - exponential
+      - 2
+    - - zoom
+    - 14
+    - 0
+    - 17
+    - 0.3
